@@ -16,6 +16,8 @@ interface MovieService {
 
     ) : Call<ResultLogin>
     
+    
+    //Todo Register User
     @FormUrlEncoded
     @POST("registerUser")
     fun register(
@@ -25,4 +27,14 @@ interface MovieService {
         @Field("password") password : String
 
     ) : Call<ResultRegister>
+    
+    
+    //Todo Update User
+    @FormUrlEncoded
+    @POST("updateUser")
+    fun update(@Field("idUser") idUser : String?,
+               @Field ("nama") nama : String?,
+               @Field("hp") hp : String?,
+               @Field("alamat") alamat : String?,
+               @Field("password") password : String?) : Call<ResultUpdate>
 }
