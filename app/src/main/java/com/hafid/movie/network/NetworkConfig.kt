@@ -22,7 +22,7 @@ object NetworkConfig{
 
                 //fun getinterceptor
             .client(getInterceptor())
-            .addConverterFactory()
+            .addConverterFactory(GsonConverterFactory.create())  //Disini blm dibuat gson convertnya
             .build()
     }
     fun service(){
