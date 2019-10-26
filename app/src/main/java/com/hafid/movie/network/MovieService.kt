@@ -15,4 +15,14 @@ interface MovieService {
         @Field("password") password : String
 
     ) : Call<ResultLogin>
+    
+    @FormUrlEncoded
+    @POST("registerUser")
+    fun register(
+        @Field("name") name : String,
+        @Field("nohp") nohp : String,
+        @Field("email") email : String,
+        @Field("password") password : String
+
+    ) : Call<ResultRegister>
 }
